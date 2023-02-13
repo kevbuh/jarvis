@@ -3,3 +3,6 @@ In context learning
 
 Similar to Toolformer?
     - https://cognitiveai.org/wp-content/uploads/2022/10/wang2022-behavior-cloned-transformers-are-neurosymbolic-reasoners-arxiv.pdf
+
+Flash attention
+    - https://arxiv.org/abs/2205.14135

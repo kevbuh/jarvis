@@ -26,7 +26,10 @@ tokens go into toolformer
 toolformer finds api call position
 figures out what params are needed
 goes into user information and retrieves params
-does the api call with params
+if no info, then it will ask you
+user inputs info
+info is saved
+model does the api call with params
 api call returns status
 status is then outputted to user
 
