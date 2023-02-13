@@ -8,9 +8,9 @@
 - [ ] logo
 - [ ] core values
 - [ ] figure out how siri works 
-    - [ ] what type of model
-    - [ ] what dataset
-    - [ ] how it's deployed
+    - what type of model
+    - what dataset
+    - how it's deployed
 - [ ] mission statement
 - [ ] website
 - [ ] app
@@ -18,8 +18,11 @@
 - [ ] subscription payment system
 - [ ] jobs and careers we need
 - [ ] how to make a compute cluster
-    - [ ] what GPUS
+    - what GPUS
     - how much storage
+    - https://www.run.ai/guides/multi-gpu/gpu-clusters
+    - we can use CU's supercomputer? 
+        - https://curc.readthedocs.io/en/latest/access/logging-in.html
 - [ ] Learn infastructure tech
     - [ ] Terraform 
     - [ ] Kubernetes 
