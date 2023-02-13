@@ -1,6 +1,9 @@
 # Branding
 
 ## Name
+Should have meaning about a buddy or freedom
+and be easy to pronounce
+and be less than or equal to three syllable
 Buddy
 
 Amigo

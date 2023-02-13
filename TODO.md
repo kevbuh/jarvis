@@ -32,7 +32,8 @@
     - [ ] Data Validation
     - [ ] Infrastructure Testing
     - [ ] Continuous Deployment
-
+- [ ] get NDA's for people
+- [ ] start blog
 - [ ] open source code
     - [ ] open source the security so people can improve on it
     - [ ] bug bounty
