@@ -1,5 +1,33 @@
 # Jobs
 
+"Join us in shaping the future of the world"
+
+## Areas
+- Research
+- Software Engineering
+    - Full stack
+    - Billing and monetization
+    - Model inference
+    - Platform reliability
+    - Product Development
+    - Product Platform
+    - Safety
+- Applied AI Product
+- Applied AI Reseach
+- Go To Market (support engineer)
+- IT
+- Legal
+- Scaling
+    - Systems
+    - Hardware Health
+- Security
+    - Detection & Response
+    - Product and Platform
+    - Offensive
+
+
+## Details
+
 Software Engineer, Full Stack
     - develop tools and prototypes
     - improve dev tools
@@ -25,6 +53,7 @@ Designer
     - Create great UI experiences
 
 Infastructure Engineer
+OpenAI's infrastructure is built on Terraform, Kubernetes, Azure, Python, Postgres, and Kafka.
     - Testing infastructure
     - Tooling
     - regression tests

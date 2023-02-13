@@ -1,22 +1,5 @@
-# buddy
+# Todo
 
-## Architecture
-
-### Audio to Text (ATT)
-https://arxiv.org/abs/2212.04356
-https://keithito.com/LJ-Speech-Dataset/
-
-### Text To Audio (TTA)
-https://arxiv.org/abs/2302.04761
-
-## Text Tokenizing
-Text tokenizing - https://github.com/openai/tiktoken
-
-## Text To Audio (TTA)
-Text to audio
-seems that you use RNN's?
-
-## Todo
 - [ ] implement toolsformer
     - [ ] in pytorch
     - [ ] how to get datasets
@@ -44,6 +27,12 @@ seems that you use RNN's?
     - [ ] Python
     - [ ] Postgres 
     - [ ] Kafka
+- [ ] Implement Continuous Integration (CI)
+    - [ ] Automated Model Testing
+    - [ ] Data Validation
+    - [ ] Infrastructure Testing
+    - [ ] Continuous Deployment
+
 - [ ] open source code
     - [ ] open source the security so people can improve on it
     - [ ] bug bounty
