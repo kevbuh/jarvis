@@ -18,6 +18,8 @@ Genius
 
 Spark
 
+Solai --> solar ai...sun represents freedom because you aren't stuck in a jail
+
 ## Logo   
    |
 -- . --
@@ -27,13 +29,13 @@ Spark
   .   
 - . - 
   .
-Some type of asterisk, like seeing the light or a star
+Some type of asterisk, like seeing the light or a star or an orb kinda like siri's
 
 ## Marketing Strategy
 - https://twitter.com/ValaAfshar/status/1561892605637853185?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1561892605637853185%7Ctwgr%5Ed0d0246b6a7d0dcf70f29b55257cdb237320339a%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.moneycontrol.com%2Fnews%2Ftrends%2Fviral-video-apples-steve-jobs-on-what-great-marketing-is-all-about-9080811.html
 
 ## Our Vision
-Imagine a world where your every need is anticipated, your every task is effortlessly executed, and your every moment is optimized - that's the magic of our AI personal assistant called Buddy, where technology meets creativity and innovation to bring you a brighter, more empowered tomorrow.
+Imagine a world where your every need is anticipated, your every task is effortlessly executed, and your every moment is optimized - that's the magic of our AI personal assistant called Buddy, where technology meets creativity and innovation to bring you a brighter, freer tomorrow.
 
 ## Sayings
 "Hey buddy...", "Yo buddy..."
@@ -44,9 +46,9 @@ Get things done.
 
 Buy time.
 
-Automate the Unneccessary.
+Buy freedom.
 
-Think differently.
+Automate the unneccessary.
 
 Do more.
 
@@ -54,9 +56,7 @@ True 24/7.
 
 Be free.
 
-Buy freedom.
-
-Siri who? I like my buddy.
+Siri? I like my Buddy.
 
 Empower uses through a truly intelligent and personalized assistent. 
 
@@ -64,7 +64,7 @@ A personal assistant to get rid of the boilerplate in life
 
 What does a rich person have that a poor person doesn't? Time. 
 
-Time is priceless? Buddy is the first product ever where you can actually BUY time.
+Time is priceless? Buddy is the first product ever where you can actually BUY time back.
 
 Conviently communicate via text or audio, with either formats in response.
 

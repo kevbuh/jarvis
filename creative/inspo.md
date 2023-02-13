@@ -10,5 +10,3 @@ Yeezy
 Star Wars
 
 VRBO logo
-
-
