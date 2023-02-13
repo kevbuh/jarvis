@@ -2,6 +2,13 @@
 
 buddy gonna free the world
 
+## Tech Stack
+
+![python_logo](assets/python-logo.png)
+
+![pytorch_logo](assets/pytorch-logo.png)
+
+
 ## Architecture
 
 ### Audio to Text (ATT)
