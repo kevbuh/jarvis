@@ -1,26 +1,10 @@
-# buddy
-
-buddy gonna free the world
-
-## Tech Stack
-
-![python_logo](assets/python-logo.png)
-
-![pytorch_logo](assets/pytorch-logo.png)
+<p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://im5.ezgif.com/tmp/ezgif-5-24076f2d97.gif">
+      <img src="https://im5.ezgif.com/tmp/ezgif-5-24076f2d97.gif" height="128">
+    </picture>
+    <h1 align="center">buddy ai</h1>
+</p>
 
 
-## Architecture
-
-### Audio to Text (ATT)
-https://arxiv.org/abs/2212.04356
-https://keithito.com/LJ-Speech-Dataset/
-
-### Text To Audio (TTA)
-https://arxiv.org/abs/2302.04761
-
-## Text Tokenizing
-Text tokenizing - https://github.com/openai/tiktoken
-
-## Text To Audio (TTA)
-Text to audio
-seems that you use RNN's?
+A digital AI assistant to free the world.
