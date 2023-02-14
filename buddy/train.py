@@ -24,12 +24,12 @@ from model import GPTConfig, GPT
 
 # I/O
 out_dir = 'out'
-eval_interval = 2000
+eval_interval = 2
 log_interval = 1
 eval_iters = 200
 eval_only = False # if True, script exits right after the first eval
 always_save_checkpoint = True # if True, always save a checkpoint after each eval
-init_from = 'scratch' # 'scratch' or 'resume' or 'gpt2*'
+init_from = 'resume' # 'scratch' or 'resume' or 'gpt2*'
 
 # wandb logging
 wandb_log = False # disabled by default
@@ -40,7 +40,7 @@ wandb_run_name = 'gpt2' # 'run' + str(time.time())
 dataset = 'openwebtext'
 gradient_accumulation_steps = 1 # used to simulate larger batch sizes
 batch_size = 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
-block_size = 1024
+block_size = 512
 
 # model
 n_layer = 12
@@ -103,6 +103,8 @@ torch.backends.cuda.matmul.allow_tf32 = True # allow tf32 on matmul
 torch.backends.cudnn.allow_tf32 = True # allow tf32 on cudnn
 
 device_type = 'mps' if 'mps' in device else 'cpu' # for later use in torch.autocast, i changed this from cude to mps
+
+print("using device:",device_type)
 
 # note: float16 data type will automatically use a GradScaler
 # TODO: what is a GradScaler
@@ -267,7 +269,9 @@ while True:
 
     # evaluate the loss on train/val sets and write checkpoints
     if iter_num % eval_interval == 0 and master_process:
+        print("evaluating...")
         losses = estimate_loss()
+        print("estimated losses, printing results...")
         print(f"step {iter_num}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
         if wandb_log:
             wandb.log({
@@ -327,7 +331,7 @@ while True:
         if local_iter_num >= 5: # let the training loop settle a bit
             mfu = raw_model.estimate_mfu(batch_size * gradient_accumulation_steps, dt)
             running_mfu = mfu if running_mfu == -1.0 else 0.9*running_mfu + 0.1*mfu
-        print(f"iter {iter_num}: loss {lossf:.4f}, time {dt*1000:.2f}ms, mfu {running_mfu*100:.2f}%")
+        print(f"iter {iter_num}: loss {lossf:.4f}, time {dt:.2f}s, mfu {running_mfu*100:.2f}%")
     iter_num += 1
     local_iter_num += 1
 

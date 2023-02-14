@@ -13,6 +13,8 @@ Chinchilla paper Andrej Karpathy talks about
 How to Calculate FLOPS
     - https://medium.com/@dzmitrybahdanau/the-flops-calculus-of-language-model-training-3b19c1f025e4
 
+Cramming: Training a language model on one gpu in one day
+    - https://arxiv.org/abs/2212.14034
 
 ### Audio to Text (ATT)
 https://arxiv.org/abs/2212.04356

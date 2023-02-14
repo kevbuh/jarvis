@@ -2,6 +2,18 @@
 
 "Join us in shaping the future of the world"
 
+## What we are looking for
+
+- laser focus on the next step in front of them combined with long-term vision
+
+- Extremely persistent and willing to work hard
+
+- takes action and is honest about what is working and what isn’t 
+
+- creative idea-generators
+
+- driven by genuine curiosity
+
 ## Areas
 - Research
 - Software Engineering

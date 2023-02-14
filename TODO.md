@@ -23,6 +23,7 @@
     - https://www.run.ai/guides/multi-gpu/gpu-clusters
     - we can use CU's supercomputer? 
         - https://curc.readthedocs.io/en/latest/access/logging-in.html
+    - https://developer.nvidia.com/blog/how-build-gpu-accelerated-research-cluster/
 - [ ] Learn infastructure tech
     - [ ] Terraform 
     - [ ] Kubernetes 
@@ -40,4 +41,5 @@
 - [ ] open source code
     - [ ] open source the security so people can improve on it
     - [ ] bug bounty
+- [ ] user feedback form
 - [ ] Secure place to store user's personal info
