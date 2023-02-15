@@ -33,3 +33,28 @@ model does the api call with params
 api call returns status
 status is then outputted to user
 
+
+
+
+
+
+hey buddy
+listening
+can you do XYZ
+    |
+    |
+    V
+audio is recorded and turned into text
+text is then fed into huggingface GPT-J
+    |
+    |
+    V
+sure thing, ill try and do xyz
+GPT-J does inference
+this text is added to dataset for future training
+    |
+    |
+    V
+
+
+
