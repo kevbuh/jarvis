@@ -42,4 +42,14 @@
     - [ ] open source the security so people can improve on it
     - [ ] bug bounty
 - [ ] user feedback form
+- [ ] voice recognition for user
+- [ ] wake word
+    - hey alexa
+    - hey siri
+    - hey buddy
+- [ ] informatin warning
+    - "Here's something I found on the internet" to let you know that the information isn't coming directly from Amazon Alexa itself.
+- [ ] how is this different that siri, alexa, etc??
+- [ ] Buddy skills
+    - how buddy knows what API's to use
 - [ ] Secure place to store user's personal info
