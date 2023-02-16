@@ -53,3 +53,7 @@
 - [ ] Buddy skills
     - how buddy knows what API's to use
 - [ ] Secure place to store user's personal info
+- [ ] cache whisper model
+- [ ] find something else other than pyaudio
+    - annoying to install
+    - ffmpeg?
