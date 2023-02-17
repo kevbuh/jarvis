@@ -1,3 +1,5 @@
+# https://arxiv.org/abs/2208.01448
+https://www.amazon.science/blog/20b-parameter-alexa-model-sets-new-marks-in-few-shot-learning
 https://towardsdatascience.com/how-amazon-alexa-works-your-guide-to-natural-language-processing-ai-7506004709d3
 
 Alexa skills are developed by third-party developers using the Alexa Skills Kit (ASK), a collection of APIs, tools, and documentation that enables developers to create voice-driven experiences for Alexa. These skills can be designed for a variety of purposes, such as playing games, checking the weather, ordering food, controlling smart home devices, and much more.

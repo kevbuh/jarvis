@@ -8,7 +8,9 @@
 
 ### A digital AI assistant to free the world.
 
-Siri, Alexa, Bixby are shitty and aren't useful. We can create something that changes the world through saving people priceless time and supporting them through life, acting as their guardian angel and buddy.
+We can create something that changes the world through saving people priceless time and supporting them through life, acting as their guardian angel and buddy.
+
+Like Jarvis from Iron Man. Imagine a world where everyone can be Iron Man.
 
 ### People don't think existing AI assistants are that good
 
@@ -16,6 +18,7 @@ Siri, Alexa, Bixby are shitty and aren't useful. We can create something that ch
 
 # Todo
 
+- [ ] make script for audio and test.py
 - [ ] implement toolsformer
     - [ ] in pytorch
     - [ ] how to get datasets

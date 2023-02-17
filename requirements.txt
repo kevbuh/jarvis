@@ -1,0 +1,12 @@
+torch
+pyaudio
+sys
+wave
+time
+os
+
+# hugging face stuff
+accelerate
+transformers
+
+whisper # git clone it?
