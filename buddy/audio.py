@@ -1,6 +1,9 @@
 import wave
 import sys
 import pyaudio
+import time
+
+st = time.monotonic()
 
 CHUNK = 1024
 FORMAT = pyaudio.paInt16
@@ -25,4 +28,7 @@ with wave.open('output.wav', 'wb') as wf:
     stream.close()
     p.terminate()
     
+et = time.monotonic() - st
+print(f"\n Recording took took: {et*1000:.2f} ms\n")
 print("----------------done recording---------------")
+

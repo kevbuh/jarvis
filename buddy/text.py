@@ -4,7 +4,7 @@ import os
 # import torch
 # import subprocess
 
-st = time.monotonic()
+st_total = time.monotonic()
 
 def get_whisper():
     sys.path.insert(0, '../whisper')
@@ -34,17 +34,18 @@ def get_whisper():
 
 #     return model
 
-
-
 print("----------------getting whisper---------------")
-
 model = get_whisper()
+print("----------------whisper transcribing---------------")
+st_transcribe = time.monotonic()
 # result = model.transcribe("output.wav")
 result = model.transcribe("output.wav")
 # result = model.transcribe("buddy/LJ037-0171.wav")
+et_transcribe = time.monotonic() - st_transcribe
+print(f"\n Transcribing took took: {et_transcribe*1000:.2f} ms\n")
+print("-----------------------------------")
 
 
-print("")
 
 # print(result["text"])
 
@@ -54,21 +55,22 @@ print("")
 #     --num_samples=5 --max_new_tokens=100
 
 prompt = '"' + result['text'] + '"' 
-print("hurrrrrrr::::",prompt)
+print("transcription::::",prompt)
 print("")
 
-
-str = f"python3 buddy/gpt2.py --init_from=gpt2-xl --start=" + prompt +" --num_samples=5 --max_new_tokens=100"
+str = f"python3 buddy/gpt2.py --init_from=gpt2-xl --start=" + prompt +""
 
 print("-----------------------------------")
+print("")
 print("str:")
-print(str)
+# print(str)
+st_gpt2 = time.monotonic()
+os.system(str)
+et_gpt2 = time.monotonic() - st_gpt2
+print(f"\n GPT-2 time took: {et_gpt2*1000:.2f} ms\n")
 print("")
 print("-----------------------------------")
 
+et_total = time.monotonic() - st_total
 
-os.system(str)
-
-et = time.monotonic() - st
-
-print(f"\n Inference took: {et*1000:.2f} ms\n")
+print(f"\n Total inference time took: {et_total*1000:.2f} ms\n")

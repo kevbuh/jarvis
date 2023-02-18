@@ -16,8 +16,8 @@ st = time.monotonic()
 init_from = 'resume' # either 'resume' (from an out_dir) or a gpt2 variant (e.g. 'gpt2-xl')
 out_dir = 'out' # ignored if init_from is not 'resume'
 start = "\n" # or "<|endoftext|>" or etc. Can also specify a file, use as: "FILE:prompt.txt"
-num_samples = 10 # number of samples to draw
-max_new_tokens = 100 # number of tokens generated in each sample
+num_samples = 1 # number of samples to draw
+max_new_tokens = 100 # number of tokens generated in each sample, binggpt uses 350
 temperature = 0.8 # 1.0 = no change, < 1.0 = less random, > 1.0 = more random, in predictions
 top_k = 200 # retain only the top_k most likely tokens, clamp others to have 0 probability
 seed = 1337
@@ -91,13 +91,18 @@ saved_text = None
 with torch.no_grad():
     with ctx:
         for k in range(num_samples):
+            print(f"generating {num_samples}th output*&#$*($#)\n")
             y = model.generate(x, max_new_tokens, temperature=temperature, top_k=16)
             saved_text = decode(y[0].tolist())
             print(saved_text)
-            print('---------------')
+            # print('---------------')
 
-# text to audio
 
+print('---------------')
+
+st_gtts = time.monotonic()
+
+# -------------text to audio---------------
 import gtts
 from playsound import playsound
 
@@ -110,10 +115,13 @@ tts.save("hello.mp3")
 # play the audio file
 playsound("hello.mp3")
 
-print(f"bob")
+et = time.monotonic() - st
+print(f"\n text to audio took: {et*1000:.2f} ms\n")
+print('---------------')
+# -----------------------------------------
 
 
 et = time.monotonic() - st
 
 print("")
-print(f"\n GPT-2-XL took: {et*1000:.2f} ms\n")
+print(f"\n GPT2.py total time: {et*1000:.2f} ms\n")

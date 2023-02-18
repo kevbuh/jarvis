@@ -57,6 +57,8 @@
 - [ ] find something else other than pyaudio
     - annoying to install
     - ffmpeg?
-- [ ] Make inference under 200ms
+- [ ] Make total inference time <2000ms
+    - currently at 234,382.72ms or 4 minutes
+    - need to make it 117x faster
     - The modal conversational response time is extremely short, around 200 ms
 - [ ] fix pyaudio not working in conda env

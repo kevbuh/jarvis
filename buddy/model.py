@@ -244,6 +244,7 @@ class GPT(nn.Module):
 
   @classmethod
   def from_pretrained(cls, model_type, override_args=None):
+      print("from pretrained%^&%&^%&%^&%&")
       assert model_type in {'gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl'}
       override_args = override_args or {} # default to empty dict
       # only dropout can be overridden see more notes below
@@ -380,6 +381,7 @@ class GPT(nn.Module):
       the sequence max_new_tokens times, feeding the predictions back into the model each time.
       Most likely you'll want to make sure to be in model.eval() mode of operation for this.
       """
+      print("::::::::::generating:::::::::::")
       for _ in range(max_new_tokens):
           # if the sequence context is growing too long we must crop it at block_size
           idx_cond = idx if idx.size(1) <= self.config.block_size else idx[:, -self.config.block_size:]
