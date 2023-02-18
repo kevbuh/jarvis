@@ -1,7 +1,8 @@
 <p align="center">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kevbuh/buddy/main/assets/clay_buddy.png?token=GHSAT0AAAAAAB6CXRS44AYCDVXYACKTKRZKY7MN2MQ">
-      <img src="https://raw.githubusercontent.com/kevbuh/buddy/main/assets/clay_buddy.png?token=GHSAT0AAAAAAB6CXRS44AYCDVXYACKTKRZKY7MN2MQ" height="420">
+      <source media="(prefers-color-scheme: dark)" srcset="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/6/6d/UltronJarvis.png/revision/latest?cb=20150925215044">
+      <!-- <img src="https://raw.githubusercontent.com/kevbuh/buddy/main/assets/clay_buddy.png?token=GHSAT0AAAAAAB6CXRS44AYCDVXYACKTKRZKY7MN2MQ" height="420"> -->
+      <img src="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/6/6d/UltronJarvis.png/revision/latest?cb=20150925215044" height="420">
     </picture>
     <h1 align="center">buddy ai</h1>
 </p>
@@ -25,6 +26,8 @@ step 3: customization of the ML models
 step 4: make custom hardware
 
 step 5: 10x better, faster, creative, cheaper, etc
+
+step 6: Other products...home products...robots...
 
 
 # People don't think existing AI assistants are that good

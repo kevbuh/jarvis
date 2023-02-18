@@ -33,3 +33,7 @@
 23. create new skills
     - just like Apple for the iphone with the app store
 24. Disabled/blind/paraplegics people can now use computers
+25. possesses very deep scientific knowledge and is able to aid in research
+26. Customizable voice 
+    - Actual jarvis
+    - morgan freeman

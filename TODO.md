@@ -64,3 +64,6 @@
     - currently at 72484ms or 1.2 minutes
     - The modal conversational response time is extremely short, around 200 ms
 - [ ] fix pyaudio not working in conda env
+- [ ] teach jarvis to learn your voice
+- [ ] go through meta research open source repo
+    - https://github.com/orgs/facebookresearch/repositories
