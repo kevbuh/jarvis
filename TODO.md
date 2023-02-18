@@ -59,6 +59,8 @@
     - ffmpeg?
 - [ ] Make total inference time <2000ms
     - currently at 234,382.72ms or 4 minutes
-    - need to make it 117x faster
+        - need to make it 117x faster
+    - currently at 180000ms or 3 minutes
+    - currently at 72484ms or 1.2 minutes
     - The modal conversational response time is extremely short, around 200 ms
 - [ ] fix pyaudio not working in conda env

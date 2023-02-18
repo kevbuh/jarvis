@@ -58,7 +58,7 @@ prompt = '"' + result['text'] + '"'
 print("transcription::::",prompt)
 print("")
 
-str = f"python3 buddy/gpt2.py --init_from=gpt2-xl --start=" + prompt +""
+str = f"python3 buddy/gpt2.py --init_from=gpt2 --start=" + prompt +""
 
 print("-----------------------------------")
 print("")

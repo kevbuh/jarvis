@@ -78,7 +78,7 @@ class CausalSelfAttention(nn.Module):
     # support is only in PyTorch nightly
     self.flash = hasattr(torch.nn.functional, 'scaled_dot_product_attention') and self.dropout == 0.0
     if not self.flash:
-        print("WARNING: using slow attention. Flash Attention atm needs PyTorch nightly and dropout=0.0")
+        # print("WARNING: using slow attention. Flash Attention atm needs PyTorch nightly and dropout=0.0")
         # causal mask to ensure that attention is only applied to the left in the input sequence
         self.register_buffer("bias", torch.tril(torch.ones(config.block_size, config.block_size)).view(1, 1, config.block_size, config.block_size))
 
@@ -159,6 +159,8 @@ class GPT(nn.Module):
   def __init__(self, config):
     super().__init__()
 
+    print("....initing model.....")
+
     assert config.vocab_size is not None
     assert config.block_size is not None
 
@@ -199,6 +201,8 @@ class GPT(nn.Module):
     return n_params
 
   def _init_weights(self, module):
+    print("....initing weights.....")
+
     if isinstance(module, nn.Linear):
       torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
       if module.bias is not None:
@@ -207,6 +211,8 @@ class GPT(nn.Module):
       torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
 
   def forward(self, idx, targets=None):
+    print("....forward.....")
+
     device = idx.device
     b,t = idx.size()
 
@@ -230,6 +236,8 @@ class GPT(nn.Module):
       logits = self.lm_head(x[:, [-1], :]) # note: using list [-1] to preserve the time dim
       loss = None
 
+    print("....forward done.....")
+    
     return logits, loss
 
   def crop_block_size(self, block_size):
@@ -244,13 +252,13 @@ class GPT(nn.Module):
 
   @classmethod
   def from_pretrained(cls, model_type, override_args=None):
-      print("from pretrained%^&%&^%&%^&%&")
+      print("\n...from pretrained...\n")
       assert model_type in {'gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl'}
       override_args = override_args or {} # default to empty dict
       # only dropout can be overridden see more notes below
       assert all(k == 'dropout' for k in override_args)
       from transformers import GPT2LMHeadModel
-      print("loading weights from pretrained gpt: %s" % model_type)
+      print("...loading weights from pretrained gpt: %s" % model_type)
 
       # n_layer, n_head and n_embd are determined from model_type
       config_args = {

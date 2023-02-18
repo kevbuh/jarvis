@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# python3 buddy/audio.py
+python3 buddy/audio.py
 wait
 source /Users/kevinbuhler/opt/anaconda3/etc/profile.d/conda.sh
 wait
