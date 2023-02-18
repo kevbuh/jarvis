@@ -59,3 +59,4 @@
     - ffmpeg?
 - [ ] Make inference under 200ms
     - The modal conversational response time is extremely short, around 200 ms
+- [ ] fix pyaudio not working in conda env

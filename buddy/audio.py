@@ -24,3 +24,5 @@ with wave.open('output.wav', 'wb') as wf:
 
     stream.close()
     p.terminate()
+    
+print("----------------done recording---------------")

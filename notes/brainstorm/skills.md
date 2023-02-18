@@ -32,3 +32,4 @@
 22. works offline
 23. create new skills
     - just like Apple for the iphone with the app store
+24. Disabled/blind/paraplegics people can now use computers

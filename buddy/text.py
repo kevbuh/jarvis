@@ -36,13 +36,39 @@ def get_whisper():
 
 
 
+print("----------------getting whisper---------------")
 
 model = get_whisper()
+# result = model.transcribe("output.wav")
 result = model.transcribe("output.wav")
 # result = model.transcribe("buddy/LJ037-0171.wav")
 
-et = time.monotonic() - st
 
 print("")
-print(result["text"])
+
+# print(result["text"])
+
+# python3 buddy/gpt2.py \
+#     --init_from=gpt2-xl \
+#     --start="What is the answer to life, the universe, and everything?" \
+#     --num_samples=5 --max_new_tokens=100
+
+prompt = '"' + result['text'] + '"' 
+print("hurrrrrrr::::",prompt)
+print("")
+
+
+str = f"python3 buddy/gpt2.py --init_from=gpt2-xl --start=" + prompt +" --num_samples=5 --max_new_tokens=100"
+
+print("-----------------------------------")
+print("str:")
+print(str)
+print("")
+print("-----------------------------------")
+
+
+os.system(str)
+
+et = time.monotonic() - st
+
 print(f"\n Inference took: {et*1000:.2f} ms\n")
