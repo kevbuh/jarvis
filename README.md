@@ -12,6 +12,16 @@ We can create something that changes the world through saving people priceless t
 
 Like Jarvis from Iron Man. Imagine a world where everyone can be Iron Man.
 
+# Steps
+
+step 1: hack together a buddy
+step 2: create toolformer
+step 3: end to end working of product
+step 3: customization of the ML models
+step 4: make custom hardware
+step 5: 10x better, faster, creative, cheaper, etc
+
+
 ### People don't think existing AI assistants are that good
 
 <img src="notes/before_buddy/siri_sucks/notthatuseful.jpeg" height="200">

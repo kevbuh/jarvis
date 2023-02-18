@@ -57,3 +57,5 @@
 - [ ] find something else other than pyaudio
     - annoying to install
     - ffmpeg?
+- [ ] Make inference under 200ms
+    - The modal conversational response time is extremely short, around 200 ms
