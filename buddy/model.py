@@ -38,6 +38,12 @@ from torch.nn import functional as F
 import tiktoken
 import gtts
 from playsound import playsound
+import pyttsx3
+import subprocess
+import nltk
+# from nltk import tokenize
+nltk.download('punkt')
+
 
 def new_gelu(x):
     """
@@ -396,6 +402,8 @@ class GPT(nn.Module):
       print("\n::::::::::generating:::::::::::\n")
       enc = tiktoken.get_encoding("gpt2")
       decode = lambda l: enc.decode(l)
+      # engine = pyttsx3.init()
+      last_word = None
       for _ in range(max_new_tokens):
           # if the sequence context is growing too long we must crop it at block_size
           idx_cond = idx if idx.size(1) <= self.config.block_size else idx[:, -self.config.block_size:]
@@ -415,16 +423,25 @@ class GPT(nn.Module):
           idx = torch.cat((idx, idx_next), dim=1)
 
           # -------------output words one by one--------------
-          output = decode(idx[0].tolist()).split()[-1]
-          print("*********************",output)
+          # output = decode(idx[0].tolist())
+          # # output = nltk.tokenize.sent_tokenize(output)
+          # print(f"output:::::::{output}")
 
-          # make request to google to get synthesis
-          tts = gtts.gTTS(output)
+          # # if len(output) > 2:
+          #   # say = output.pop(0)
+          #   # print(say, "::::", output)
+          #   # idx[0] = idx[len(say):]
+          # # engine.say(output)
+          # # engine.runAndWait()
+          # # engine.stop()
 
-          # save the audio file
-          tts.save("hello.mp3")
+          # # make request to google to get synthesis
+          # tts = gtts.gTTS(output)
 
-          # play the audio file
-          playsound("hello.mp3")
+          # # save the audio file
+          # tts.save("x.mp3")
+
+          # # play the audio file
+          # playsound("x.mp3")
 
       return idx
