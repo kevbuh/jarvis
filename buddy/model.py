@@ -35,6 +35,10 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
+import tiktoken
+import gtts
+from playsound import playsound
+
 def new_gelu(x):
     """
     Implementation of the GELU activation function currently in Google BERT repo (identical to OpenAI GPT).
@@ -159,7 +163,7 @@ class GPT(nn.Module):
   def __init__(self, config):
     super().__init__()
 
-    print("....initing model.....")
+    # print("....initing model.....")
 
     assert config.vocab_size is not None
     assert config.block_size is not None
@@ -201,7 +205,7 @@ class GPT(nn.Module):
     return n_params
 
   def _init_weights(self, module):
-    print("....initing weights.....")
+    # print("....initing weights.....")
 
     if isinstance(module, nn.Linear):
       torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
@@ -211,7 +215,7 @@ class GPT(nn.Module):
       torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
 
   def forward(self, idx, targets=None):
-    print("....forward.....")
+    # print("....forward.....")
 
     device = idx.device
     b,t = idx.size()
@@ -236,7 +240,7 @@ class GPT(nn.Module):
       logits = self.lm_head(x[:, [-1], :]) # note: using list [-1] to preserve the time dim
       loss = None
 
-    print("....forward done.....")
+    # print("....forward done.....")
     
     return logits, loss
 
@@ -389,7 +393,9 @@ class GPT(nn.Module):
       the sequence max_new_tokens times, feeding the predictions back into the model each time.
       Most likely you'll want to make sure to be in model.eval() mode of operation for this.
       """
-      print("::::::::::generating:::::::::::")
+      print("\n::::::::::generating:::::::::::\n")
+      enc = tiktoken.get_encoding("gpt2")
+      decode = lambda l: enc.decode(l)
       for _ in range(max_new_tokens):
           # if the sequence context is growing too long we must crop it at block_size
           idx_cond = idx if idx.size(1) <= self.config.block_size else idx[:, -self.config.block_size:]
@@ -407,5 +413,18 @@ class GPT(nn.Module):
           idx_next = torch.multinomial(probs, num_samples=1)
           # append sampled index to the running sequence and continue
           idx = torch.cat((idx, idx_next), dim=1)
+
+          # -------------output words one by one--------------
+          output = decode(idx[0].tolist()).split()[-1]
+          print("*********************",output)
+
+          # make request to google to get synthesis
+          tts = gtts.gTTS(output)
+
+          # save the audio file
+          tts.save("hello.mp3")
+
+          # play the audio file
+          playsound("hello.mp3")
 
       return idx

@@ -17,6 +17,7 @@ init_from = 'resume' # either 'resume' (from an out_dir) or a gpt2 variant (e.g.
 out_dir = 'out' # ignored if init_from is not 'resume'
 start = "\n" # or "<|endoftext|>" or etc. Can also specify a file, use as: "FILE:prompt.txt"
 num_samples = 1 # number of samples to draw
+# max new tokens scales quadratically
 max_new_tokens = 100 # number of tokens generated in each sample, binggpt uses 350
 temperature = 0.8 # 1.0 = no change, < 1.0 = less random, > 1.0 = more random, in predictions
 top_k = 200 # retain only the top_k most likely tokens, clamp others to have 0 probability
@@ -85,7 +86,6 @@ start_ids = encode(start)
 x = (torch.tensor(start_ids, dtype=torch.long, device=device)[None, ...])
 
 
-
 saved_text = None
 # run generation
 with torch.no_grad():
@@ -97,23 +97,27 @@ with torch.no_grad():
             print(saved_text)
             # print('---------------')
 
+et = time.monotonic() - st
+
+print("")
+print(f"\n GPT2.py total time: {et*1000:.2f} ms\n")
 
 print('---------------')
 
 st_gtts = time.monotonic()
 
 # -------------text to audio---------------
-import gtts
-from playsound import playsound
+# import gtts
+# from playsound import playsound
 
-# make request to google to get synthesis
-tts = gtts.gTTS(saved_text)
+# # make request to google to get synthesis
+# tts = gtts.gTTS(saved_text)
 
-# save the audio file
-tts.save("hello.mp3")
+# # save the audio file
+# tts.save("hello.mp3")
 
-# play the audio file
-playsound("hello.mp3")
+# # play the audio file
+# playsound("hello.mp3")
 
 et = time.monotonic() - st
 print(f"\n text to audio took: {et*1000:.2f} ms\n")
@@ -121,7 +125,3 @@ print('---------------')
 # -----------------------------------------
 
 
-et = time.monotonic() - st
-
-print("")
-print(f"\n GPT2.py total time: {et*1000:.2f} ms\n")
