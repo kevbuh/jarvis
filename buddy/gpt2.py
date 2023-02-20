@@ -1,5 +1,6 @@
 """
 Sample from a trained model
+# this might be usefil --> https://arxiv.org/pdf/2009.06732.pdf
 """
 import os
 import time

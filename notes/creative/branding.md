@@ -24,6 +24,12 @@ Bob
 
 Babbler
 
+xformer
+
+rivo/reevo/revo
+
+ggi
+
 Maybe some names like from star wars C3PO or R2D2 or BB8...which can represent the model that the user has. Most of these things have an X in it since it is a rare sound
 
 ## Logo   
