@@ -1,1 +1,0 @@
-Nothing you say will be recorded and sent to Buddy until you've uttered the wake word. However, there are instances where Buddy will activate when you didn't mean for it to, such as if you say something that sounds similar to your wake word. Every recording made by an Buddy-enabled device will indeed be saved to your account.
