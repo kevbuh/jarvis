@@ -1,4 +1,4 @@
-# On-Device End-to-End LLM Google Extension and Mobile App
+# Four Mini Projects In One!
 
 This project consists of four different but similar mini-projects, where I looked into what it would take to start making machine-learning powered tools.
 <br/>
